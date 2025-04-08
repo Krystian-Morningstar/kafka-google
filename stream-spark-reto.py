@@ -95,8 +95,8 @@ st.markdown("____")
 
 st.sidebar.header("Query MongoDB & PostgreSQL")
 
-
-API_URL = "http://api:8000"
+API_URL = "http://34.134.154.236:8000"
+#API_URL = "http://api:8000"
 
 st.title("Envío de Datos a Kafka")
 
