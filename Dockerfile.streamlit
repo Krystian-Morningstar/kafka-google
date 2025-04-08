@@ -1,0 +1,12 @@
+FROM python:3.9
+
+WORKDIR /app
+
+# Copiar todos los archivos necesarios
+COPY stream-spark-reto.py requirements.txt identificacion.png ./
+
+# Instalar las dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Comando para correr la app
+CMD ["streamlit", "run", "stream-spark-reto.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
