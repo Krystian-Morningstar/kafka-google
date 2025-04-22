@@ -11,7 +11,7 @@ def init_connection():
 
 client = init_connection()
 
-@st.cache_data(ttl=600)
+# @st.cache_data(ttl=600)
 def get_data():
     db = client.games
     items = db.games.find()
