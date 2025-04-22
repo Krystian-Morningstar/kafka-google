@@ -138,7 +138,8 @@ if st.sidebar.button("Query Mongodb Collection"):
 ## Método para consultar PostgreSQL
 if st.sidebar.button("Query Postgresql table"):
     st.header("Resultados de la consulta a PostgreSQL")
-    df = conn.query('SELECT * FROM games;', ttl="10m") 
+    # df = conn.query('SELECT * FROM games;', ttl="10m") 
+    df = conn.query('SELECT * FROM motorcycle;', ttl="0s")
     for row in df.itertuples():
         st.write(row)
     st.markdown("____")
